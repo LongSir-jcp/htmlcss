@@ -1,0 +1,8 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    background-image: url(D:\老师课件\01day\img\QQ截图20210831181130.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

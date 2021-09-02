@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05</title>
+    <!-- <style>
+
+
+        /* 元素选择器 */
+        div{
+
+        }
+
+        span{
+
+        }
+        /* class类，具有相同class类名的标签  可以重复
+        class：不能纯数字，中文
+        
+        */
+        .first{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .Ox-demon-king{
+
+        }
+
+        /* id选择器   不能重复*/
+        #third{
+
+        }
+
+        /* 通配符*：选中所以标签 */
+        *{
+            /* 外边距 */
+            margin: ;
+            /* 内边际 */
+
+        }
+    </style> -->
+
+    <style>
+        a:link{
+            /* 没有点击之前的样式 */
+            color: burlywood;
+            font-size: 20px;
+        }
+        a:visited{
+            /* 已经点过一次的样式 */
+            color: green;
+        }
+        a:hover{
+            /* 鼠标一上去的样式 */
+            color: red;
+        }
+        a:active{
+            /* 鼠标按住的样式 */
+            color: blue;
+        }
+        .hov:hover{
+            color: red;
+        }
+        .inpt:focus{
+            outline: none;
+            border: none;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- html定义 -->
+    <div class="first"></div>
+    <p class="first"></p>
+    <P class="Ox-demon-king"></P>
+    <div id="third"></div>
+    <div id="three"></div>
+
+    <!-- 优先级 元素选择器  class id * -->
+    <div class="box1" id="boxid" >盒子</div>
+    <!-- id > class > 元素选择器 > 通配符-->
+
+    <!-- 链接伪类选择器 link fouce-->
+    <a href="http://www.baidu.com">百度一下</a>
+    <div class="hov">   新浪微博</div>
+    <input  class="inpt" type="text">
+
+    <!-- 标签关系：嵌套关系 -->
+    <div class="father">
+        <div class="child1"> 11111</div>
+        <div class="child2"> 22222</div>
+        <div class="child3"> 333333</div>
+
+       
+    </div>
+</body>
+</html>

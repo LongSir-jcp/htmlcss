@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css样式</title>
+    <style>
+        p{
+            color: rgb(25, 172, 103);
+            size: 50cm;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- css层叠样式表 级联样式表 -->
+    <!-- 选择器 + 空格 + {
+        声明；
+        声明；
+    }
+    声明：属性名  属性值 -->
+
+    <!-- css引入方式
+    行内   style=""
+    内联   <head>
+    外联  <link>
+    -->
+
+    <!-- 优先级 行内> 内联 >外联 -->
+    <div style="width: 100px; height: 100px;background-color:yellow;">
+        css样式 行内
+    </div>
+    <p>
+        css内联
+    </p>
+   
+
+
+    <div>
+
+    </div>
+    <link rel="stylesheet" href="./01引入.css">
+    <span>css222外联link</span>
+    <span>css23332</span>
+
+
+</body>
+</html>
