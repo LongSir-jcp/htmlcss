@@ -1,7 +1,7 @@
-# First_Web_Application
+# ninth_xm
 
 #### 介绍
-个人简历
+实训前端项目
 
 #### 软件架构
 软件架构说明
