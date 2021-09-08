@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+        }
+        img{
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            transition: all 3s linear;
+           
+        }
+        .sty{
+            width: 50px;
+            height: 50px;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        var box=document.querySelector('.box')
+        box.addEventListener('click',function(data){
+
+            box.innerHTML = ''
+            var img1=document.createElement('img')
+            img1.src = 'd:/壁纸/timg.jpg'
+            // img1.classList.add('sty')
+
+            setTimeout(function(){
+                img1.classList.add('sty')
+            },1000)
+
+            console.log(data.offsetX,data.offsetY)
+            img1.style.top=data.offsetY - 25 +'px'
+            img1.style.left=data.offsetX - 25 +'px'
+
+            box.appendChild(img1)
+        })
+    </script>
+</body>
+</html>

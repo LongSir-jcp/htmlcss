@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://pay.qq.com/favicon.ico" />
+    <title>首页</title>
+    <link rel="stylesheet" href="./xm_css/index.css">
+    <link rel="stylesheet" href="./xm_css/top_menu.css">
+    <link rel="stylesheet" href="./xm_css/nav.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+
+<body>
+
+    <div class="top_menu">
+        <div class="txt_left">
+            <div class="left_ct">
+                <a href="">手机版</a>
+            </div>
+        </div>
+        <div class="txt_right">
+            <div class="right_ct">
+                <span class="style1">欢迎光临！</span>
+                <a href="">登录</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="index_advtop">
+        <div class="header_column">
+            <div class="header_layer">
+                <div class="layer_lt">
+                    <img src="https://imgcache.qq.com/bossweb/pay/pay_v4/images/public/logo.png" alt="">
+                </div>
+                <div class="layer_rt">
+                    <ul>
+                        <li class="current">
+                            <a href="./index.html" title="首 页">首 页</a>
+                        </li>
+                        <li>
+                            <a href="../qbq_pay/Q币充值.html" title="Q币充值">Q币充值</a>
+                        </li>
+                        <li>
+                            <a href="../gamepay/gamepay.html" title="游戏充值">游戏充值</a>
+                        </li>
+                        <li>
+                            <a href="../service_pay/service.html" title="服务开通">服务开通</a>
+                        </li>
+                        <li>
+                            <a href="../xiangmu/我的账户.html" title="我的帐户">我的帐户</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ad_all">
+            <!-- 创建一个ul，用于放置图片 -->
+            <ul id="imgList">
+                <li><img class="img1" id="nav_img" src="https://midas.gtimg.cn/pay_ads/1630397757599998SMBWp.jpg"
+                        alt=""></li>
+                <li><img id="nav_img" src="https://midas.gtimg.cn/pay_ads/1631001297933ZdIx3j7.jpg" alt=""></li>
+                <li><img id="nav_img" src="https://imgcache.qq.com/bossweb/ipay/images/pic/index_banner1.jpg" alt="">
+                </li>
+                <li><img id="nav_img" src="https://midas.gtimg.cn/pay_ads/1630397757599998SMBWp.jpg" alt=""></li>
+            </ul>
+            <!-- <img id="advt_1" src="https://midas.gtimg.cn/pay_ads/1630397757599998SMBWp.jpg" alt=""> -->
+        </div>
+        <!-- 创建轮播图按钮 -->
+        <div id="navDiv">
+            <a id="n_h" href="javascript:;"></a>
+            <a id="n_h" href="javascript:;"></a>
+            <a id="n_h" href="javascript:;"></a>
+        </div>
+    </div>
+
+    <!-- 轮播图 -->
+    <!-- <script>
+        var arr = [
+            "https://midas.gtimg.cn/pay_ads/1630397757599998SMBWp.jpg",
+            "https://midas.gtimg.cn/pay_ads/1631001297933ZdIx3j7.jpg",
+            "https://imgcache.qq.com/bossweb/ipay/images/pic/index_banner1.jpg",
+        ];
+        var img1 = document.querySelector('#advt_1');
+        var num = 0;
+        setInterval(function () {
+            num++;
+            img1.src = arr[num % 3];
+            while (num == 9) {
+                num = 1;
+            }
+            console.log(num);
+        }, 2000);
+    </script> -->
+
+    <!-- 轮播图+链接按钮 -->
+    <script type="text/javascript">
+        window.onload = function () {
+            var imgList = document.getElementById("imgList");
+            var imgArr = document.querySelectorAll('#nav_img');
+            var img1 = document.querySelector('.img1');
+
+            //动态改变超链接div，使其永远居中
+            var imgDiv = document.getElementById("navDiv");
+            var index_advtop = document.getElementById("index_advtop");
+            navDiv.style.left = (index_advtop.offsetWidth - navDiv.offsetWidth) / 2 + "px";
+
+            //实现手动点击播放
+            var index = 0;
+            var allA = document.querySelectorAll('#n_h');
+            allA[index].style.backgroundColor = "red";
+
+            for (var i = 0; i < allA.length; i++) {
+                //为每一个超链接都添加一个num属性，辨别那个是第几个
+                allA[i].num = i;
+                //为超链接绑定单击
+                allA[i].onclick = function () {
+                    //点击超链接时，关闭定时器
+                    clearInterval(timer);
+                    //获取点击的超链接索引,并将其设置为index
+                    index = this.num;
+                    console.log(index)
+                    //修改正在选中的a
+                    setA();
+                    if (index == 0) {
+                        //切换图片
+                        img1.src = imgArr[3].src;
+                    } else {
+                        //切换图片
+                        img1.src = imgArr[index].src;
+                    }
+                    //动画执行完毕，开启自动切换
+                    autoChange();
+
+                }
+            }
+
+
+            //开启自动切换图片
+            autoChange();
+            //创建一个方法用来设置选中的a
+            function setA() {
+                //判断当前索引是否是最后一张图片
+                if (index >= imgArr.length - 1) {
+                    //则将index设置为0
+                    index = 0;
+                    //通过css将最后一张切换成第一张
+                    imgList.style.left = 0 + "px";
+                }
+                //遍历所有a 并将背景颜色为黑色
+                for (var i = 0; i < allA.length; i++) {
+                    //设置内联样式优先级最高，此时鼠标移动hover被覆盖
+                    //变为空串，将内联样式去除，样式表black生效，就不会覆盖hover
+                    allA[i].style.backgroundColor = "";
+                }
+                //将选中的a 设置为红色
+                allA[index].style.backgroundColor = "red";
+            }
+
+            //创建一个函数，用来开启自动切换图片
+            //定义一个自动切换的定时器标识
+            var timer;
+            function autoChange() {
+                //开启一个定时器，定时切换图片
+                timer = setInterval(function () {
+                    //使索引自增
+                    index++;
+                    index %= imgArr.length;
+                    // 切换图片
+                    img1.src = imgArr[index].src;
+                    //修改导航表
+                    setA();
+                }, 2000)
+            }
+        }
+    </script>
+
+    <div class="wrap_index">
+        <div class="content">
+            <div class="product_pay" id="product_paydqb">
+                <div class="paydqb_top">
+                    <div class="paydqb_title1">
+                        <a class="qb_title" href="">
+                            <!-- <h2>充Q点/Q币</h2> -->
+                        </a>
+                        <a class="qb_more" href="">更多>></a>
+                    </div>
+                    <div class="paydqb_title2">用于购买腾讯所有业务及游戏道具</div>
+                </div>
+                <div class="paydbq_ico">
+                    <ul class="qb_list">
+                        <li>
+                            <a href="">
+                                <span>
+                                    <img src="http://imgcache.qq.com/bossweb/pay/pay_v4/images/public/wechat.png"
+                                        alt="微信支付" style="margin: 0">
+                                </span>
+                                <span class="name">微信支付</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>
+                                    <img src="http://imgcache.qq.com/bossweb/pay/pay_v4/images/public/qqwallet.png"
+                                        alt="QQ钱包" style="margin: 0">
+                                </span>
+                                <span class="name">QQ钱包</span></a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>
+                                    <img src="http://imgcache.qq.com/bossweb/pay/pay_v4/images/public/qqcard.png"
+                                        alt="QQ卡支付" style="margin: 0">
+                                </span>
+                                <span class="name">QQ卡</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>
+                                    <img src="http://imgcache.qq.com/bossweb/pay/pay_v4/images/public/uniphone.png"
+                                        alt="话费支付" style="margin: 0">
+                                </span>
+                                <span class="name">话费</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product_pay" id="product_paygame">
+                <div class="paygame_top">
+                    <div class="paygame_title1">
+                        <a class="ga_title" href="">
+                            <!-- <h2>充值游戏点券</h2> -->
+                        </a>
+                        <a class="ga_more" href="">更多>></a>
+                    </div>
+                    <div class="paygame_title2">充值游戏点券，驰骋游戏世界</div>
+                </div>
+                <div class="paygame_ico">
+                    <ul class="ga_list">
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/pay/pay_v4/images/logomid/icon_game_dnfdq.png"
+                                        alt="DNF点券">
+                                </span>
+                                <span class="name">DNF点券</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/pay/pay_v4/images/logomid/icon_game_cfdq.png"
+                                        alt="CF点券">
+                                </span>
+                                <span class="name">CF点券</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/pay/pay_v4/images/logomid/icon_game_loldq.png"
+                                        alt="英雄联盟">
+                                </span>
+                                <span class="name">英雄联盟</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/ipay/images/public/icons/xwdq/logo_m.png"
+                                        alt="QQ炫舞">
+                                </span>
+                                <span class="name">QQ炫舞</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/ipay/images/public/icons/hltjcz/logo_m.png"
+                                        alt="逆战">
+                                </span>
+                                <span class="name">逆战点券</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/ipay/images/public/icons/qqxw2/logo_m.png"
+                                        alt="QQ飞车">
+                                </span>
+                                <span class="name">QQ炫舞2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product_pay" id="product_payservice">
+                <div class="paysvc_top">
+                    <div class="paysvc_title1">
+                        <a class="sr_title" href="">
+                            <!-- <h2>开通包月服务</h2> -->
+                        </a>
+                        <a class="sr_more" href="">更多>></a>
+                    </div>
+                    <div class="paysvc_title2">开通包月服务，享受精彩在线生活</div>
+                </div>
+                <div class="paysvc_ico">
+                    <ul class="sr_list">
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/ipay/images/public/icons/txsp/logo_m.png"
+                                        alt="腾讯视频">
+                                </span>
+                                <span class="name">腾讯视频</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/pay/pay_v4/images/logomid/icon_ltmclub.png"
+                                        alt="QQ会员">
+                                </span>
+                                <span class="name">QQ会员</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/pay/pay_v4/images/logomid/icon_xxjzgw.png"
+                                        alt="黄钻贵族">
+                                </span>
+                                <span class="name">黄钻贵族</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/pay/pay_v4/images/logomid/icon_xxzxsj.png"
+                                        alt="绿钻豪华版">
+                                </span>
+                                <span class="name">绿钻豪华版</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/ipay/images/public/icons/qqyfsc/logo_m.png"
+                                        alt="QQ阅读">
+                                </span>
+                                <span class="name">QQ阅读</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="s">
+                                    <img src="http://imgcache.qq.com/bossweb/ipay/images/public/icons/wyclub/logo_m.png"
+                                        alt="微云会员">
+                                </span>
+                                <span class="name">微云会员</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                Copyright © 1998 - 2021 Tencent. All Rights Reserved
+                <br>
+                腾讯公司
+                <a class="clink" target="_blank"
+                    href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml">版权所有</a>
+                <a class="clink" target="_blank" href="http://www.qq.com/contract.shtml">服务条款</a>
+                <a href="http://privacy.qq.com" target="_blank" class="clink">隐私政策</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

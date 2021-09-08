@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07</title>
+
+    <style>
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div><img src="./../../壁纸/ccc.jpg" alt=""></div>
+    <script>
+        var arr=[
+            "./../../壁纸/AAA.jpg",
+            "./../../壁纸/bbb.jpg",
+            "./../../壁纸/ccc.jpg"
+        ];
+        var img1=document.querySelector('img')
+        var num=0
+        setInterval(function(){
+            num++
+            img1.src=arr[ num % 3 ];
+            
+        },2000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        .box{
+            width: 229px;
+            height: 326px;
+            background-color: white;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 5px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .box img{
+            display: block;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        .font{
+            height: 44px;
+            overflow: hidden;
+        }
+        .center span:nth-child(1){
+            color: red;
+
+        }
+        .center span:nth-child(2){
+            color: red;
+            
+        }
+        .center span:nth-child(3){
+            font-size: small;
+            color: rgb(175, 161, 143);
+        }
+        
+        .hv{
+            width: 80%;
+            height: 30px;
+            background-color: tomato;
+            color: white;
+            border-radius: 15px;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            display: none;
+        }
+        .box:hover .hv{
+            display: block;
+        }
+        .box:hover img , .box.box:hover .font,.box.box:hover .center{
+            opacity: 0.5;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="D:\vs code projects\第三天\dingwei_taobao.webp" alt="">
+        <div class="font">气质睡觉啊僧伽沙发沙发收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾啊啊啊啊啊啊啊啊啊123</div>
+        <div class="center">
+            <span>$</span>
+            <span>59</span>
+            <span>30人买</span>
+        </div>
+        <div class="hv">查找相似</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>会员登录花礼网</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <span class="phone">账号登录</span>
+        <span class="chat">微信登录</span>
+      </div>
+      <div class="phone1">
+        <div class="pjonelogin">手机验证码登录</div>
+        <form>
+          <img class="p" src="" alt="" />
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="请输入账号"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="请输入密码"
+          />
+          <div class="submit">登录/注册</div>
+          <div class="footer">
+            <img src="../img/感叹号" alt="" class="gantan" />
+            <span>首次登录自动创建账号</span>
+          </div>
+        </form>
+        <div class="footer-f">
+          <div style="background-image: url(http://www.baidu.com)"></div>
+        </div>
+      </div>
+      <div class="chat1"></div>
+    </div>
+    <script>
+      var phone = document.querySelector(".phone");
+      var chat = document.querySelector(".phone");
+
+      var phone1 = document.querySelector(".phone1");
+      var chat1 = document.querySelector(".chat1");
+
+      phone.addEventListener("click");
+      
+    </script>
+  </body>
+</html>

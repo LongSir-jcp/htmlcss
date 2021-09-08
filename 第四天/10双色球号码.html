@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+</head>
+<body>
+    <!-- 随机取一组 7数字显示到页面上 -->
+    <script>
+        var element=document.createElement('div')
+        var body=document.querySelector('body')
+        element.innerHTML='双色球'
+
+        for(var i=0;i<7;i++){
+            
+            // console.log()
+            var s=document.createElement('span')
+            s.innerHTML+=Math.floor(Math.random()*90+10)
+            element.appendChild(s)
+        }
+    </script>
+</body>
+</html>

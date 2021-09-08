@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./top_menu.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./邓宇轩/service.css">
+    <link rel="stylesheet" href="./马文欢/服务开通单个样式.css">
+</head>
+
+<body>
+    <!-- 最顶部 -->
+    <div class="top_menu">
+        <div class="txt_left">
+            <div class="left_ct">
+                <a href="">手机版</a>
+            </div>
+        </div>
+        <div class="txt_right">
+            <div class="right_ct">
+                <span class="style1">欢迎光临！</span>
+                <a href="">登录</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="header_column">
+        <div class="header_layer">
+            <div class="layer_lt">
+                <img src="https://imgcache.qq.com/bossweb/pay/pay_v4/images/public/logo.png" alt="">
+            </div>
+            <div class="layer_rt">
+                <ul>
+                    <!-- 自己做的哪个页面，就把class="current"换到自己做的页面的li中 -->
+                    <!-- 如果不想改的话，需要自己重新命名，然后到css里面去修改相关数据 -->
+                    <li>
+                        <a href="../index/index.html" title="首 页">首 页</a>
+                    </li>
+                    <li>
+                        <a href="../qbq_pay/Q币充值.html" title="Q币充值">Q币充值</a>
+                    </li>
+                    <li>
+                        <a href="../gamepay/gamepay.html" title="游戏充值">游戏充值</a>
+                    </li>
+                    <li class="current">
+                        <a href="./service.html" title="服务开通">服务开通</a>
+                    </li>
+                    <li>
+                        <a href="../xiangmu/我的账户.html" title="我的帐户">我的帐户</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+
+        <div class="store-title">
+            <h2>请选择您要开通的包月服务</h2>
+            <div class="searchbox">
+                <div class="search-content">
+                    <input class="search-input" type="text" value="请您输入开通的服务名称">
+                    <button class="search-btn">搜索</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-store cf" id="content" style>
+
+
+            <!-- 1  -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="超级会员" src="./img/1..png" />
+                            <h3>超级会员</h3>
+                            <p class="store-bridf store-bridf-max">
+                                尊享最快QQ等级加速、出场动画、移动在线等
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 上滑页 -->
+
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="超级会员" src="./img/1.hov.png" />超级会员
+                            </h4>
+                            <div class="price">
+                                <p>
+                                    <em>20 </em>元/月
+                                    <span id="mobile_price">，手机短信：<em>25 </em>元/月</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="">
+                                在QQ会员已有特权的基础上，享有最高3.0倍等级加速、移动在线、聊天记录永久漫游、专属气泡、专属游戏礼包等至尊体验。
+                                <span>...</span>
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_cjclub" href="/ipay/index.shtml?c=cjclub,ltmclub&amp;aid=pay.service&amp;ADTAG=pay.service.service.self&amp;ch=qdqb,qqwallet,weixin,kj" class="btn-com-s" link="self" title="开通服务">
+                                    <span class="noline">开通</span>
+                                </a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="绿钻豪华版" src="./img/2.png" />
+                            <h3>绿钻豪华版</h3>
+                            <p class="store-bridf store-bridf-max">
+                                王者风范，畅享绿钻+付费音乐包双重特权
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="绿钻豪华版" src="./img/2.hov.png" />绿钻豪华版
+                            </h4>
+                            <div class="price">
+                                <p>
+                                    <em>15 </em>元/月<span id="mobile_price">，手机短信：<em>20 </em>元/月
+                  </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                绿钻豪华版，覆盖所有绿钻特权和付费音乐包特权，让你炫酷挡不住！
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_xxzxsj" href="/ipay/index.shtml?c=xxzxsj&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="腾讯视频VIP" src="./img/3.png" />
+                            <h3>腾讯视频VIP</h3>
+                            <p class="store-bridf store-bridf-max">
+                                精彩影片随心看，热播大剧天天更。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="腾讯视频VIP" src="./img/3.hov.png" />腾讯视频VIP
+                            </h4>
+                            <div class="price">
+                                <p>
+                                    <em>30 </em>元/月<span id="mobile_price">，手机短信：<em>25 </em>元/月
+                  </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                尊享高清视频资源，精彩影片随心看，热播大剧天天更。
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 跳转至旧版的业务 -->
+                                <a id="a_self_txsp" href="/ipay/index.shtml?c=txsp,tskjyby&amp;ADTAG=pay.service.txsp.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="QQ会员" src="./img/4.png" />
+                            <h3>QQ会员</h3>
+                            <p class="store-bridf store-bridf-max">
+                                QQ、游戏、生活三大领域特权体验
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="QQ会员" src="./img/4.hov.png" />QQ会员
+                            </h4>
+                            <div class="price">
+                                <p>
+                                    <em>10 </em>元/月<span id="mobile_price">，手机短信：<em>15 </em>元/月
+                  </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                尊享红色昵称、等级加速、游戏礼包等近80多项QQ、游戏、生活领域的特权。不仅PC，手机上也能体验！
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_ltmclub" href="/ipay/index.shtml?c=ltmclub,cjclub&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="黄钻贵族" src="./img/5.png" />
+                            <h3>黄钻贵族</h3>
+                            <p class="store-bridf store-bridf-max">
+                                精美装扮、酷炫礼包、游戏特权
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="黄钻贵族" src="./img/5.hov.png" />黄钻贵族
+                            </h4>
+                            <div class="price">
+                                <p>
+                                    <em>10 </em>元/月<span id="mobile_price">，手机短信：<em>15 </em>元/月
+                  </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                一样价格，更多特权！开通年费黄钻即刻获得200点成长值，享受最高速成长，点亮个性年图标。
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 跳转至旧版的业务 -->
+                                <a id="a_self_xxjzgw" href="/qzone/index.shtml?aid=pay.qzone&amp;ADTAG=pay.service.qzone.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="黄钻豪华版" src="./img/6.png" />
+                            <h3>黄钻豪华版</h3>
+                            <p class="store-bridf store-bridf-max">
+                                闪电图标、成长加速、隐身、场景装扮
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="黄钻豪华版" src="./img/6.hov.png" />黄钻豪华版
+                            </h4>
+                            <div class="price">
+                                <p><em>15 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                黄钻豪华版尊享“闪电图标”、“成长加速”、“抵扣券”、“隐身”、“场景装扮”等特权！
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 跳转至旧版的业务 -->
+                                <a id="a_self_xxjzsj" href="/qzonelux/index.shtml?aid=pay.qzonelux&amp;ADTAG=pay.service.qzonelux.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="全民K歌VIP" src="./img/7.png" />
+                            <h3>全民K歌VIP</h3>
+                            <p class="store-bridf">
+                                尊享专业老师教唱指导，投稿作品获取海量听众，鲜花道具加成福利，HQ高清伴奏录音等（此处开通VIP仅适用于移动端）<span>...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="全民K歌VIP" src="./img/7.hov.png" />全民K歌VIP
+                            </h4>
+                            <div class="price">
+                                <p><em>20 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                尊享专业老师教唱指导，投稿作品获取海量听众，鲜花道具加成福利，HQ高清伴奏录音等（此处开通VIP仅适用于移动端）
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_qmkgqq" href="/ipay/index.shtml?c=qmkgqq&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="QQ大会员" src="./img/8.png" />
+                            <h3>QQ大会员</h3>
+                            <p class="store-bridf">
+                                Q币充值折扣、群超酷头衔、超级会员及豪华黄钻双特权<span>...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="QQ大会员" src="./img/8.hov.png" />QQ大会员
+                            </h4>
+                            <div class="price">
+                                <p><em>35 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                Q币充值折扣、群超酷头衔、超级会员及豪华黄钻双特权
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_svlhhzdb" href="/ipay/index.shtml?c=svlhhzdb&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="腾讯视频+QQ音乐联合会员" src="./img/9.png" />
+                            <h3>腾讯视频+QQ音乐联合会员</h3>
+                            <p class="store-bridf store-bridf-max">
+                                畅享腾讯视频VIP和QQ音乐会员全部特权
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="腾讯视频+QQ音乐联合会员" src="./img/9.hov.png" />腾讯视频+QQ音乐联合会员
+                            </h4>
+                            <div class="price">
+                                <p><em>30 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                畅享腾讯视频VIP和QQ音乐会员全部特权
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_txspqqm" href="/ipay/index.shtml?c=txspqqm&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="SVIP+腾讯视频" src="./img/10.png" />
+                            <h3>SVIP+腾讯视频</h3>
+                            <p class="store-bridf">
+                                SVIP+腾讯视频会员身份铭牌,畅享超级会员和腾讯视频VIP所有尊贵特权<span>...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="SVIP+腾讯视频" src="./img/10.hov.png" />SVIP+腾讯视频
+                            </h4>
+                            <div class="price">
+                                <p><em>40 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                SVIP+腾讯视频会员身份铭牌,畅享超级会员和腾讯视频VIP所有尊贵特权
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_shvipgg" href="/ipay/index.shtml?c=shvipgg&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="SVIP+QQ音乐" src="./img/11.png" />
+                            <h3>SVIP+QQ音乐</h3>
+                            <p class="store-bridf">
+                                SVIP+QQ音乐会员身份铭牌,畅享超级会员和绿钻豪华版所有尊贵特权<span>...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="SVIP+QQ音乐" src="./img/11.hov.png" />SVIP+QQ音乐
+                            </h4>
+                            <div class="price">
+                                <p><em>30 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                SVIP+QQ音乐会员身份铭牌,畅享超级会员和绿钻豪华版所有尊贵特权
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_bysvpgg" href="/ipay/index.shtml?c=bysvpgg&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="腾讯先游会员" src="./img/12.png" />
+                            <h3>腾讯先游会员</h3>
+                            <p class="store-bridf">
+                                抢先体验到最新最全的海量游戏、无需下载游戏先人一步的云游戏<span>...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="腾讯先游会员" src="./img/12.hov.png" />腾讯先游会员
+                            </h4>
+                            <div class="price">
+                                <p><em>29 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                抢先体验到最新最全的海量游戏、无需下载游戏先人一步的云游戏
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_txxyhyqq" href="/ipay/index.shtml?c=txxyhyqq&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="蓝钻贵族" src="./img/13.png" />
+                            <h3>蓝钻贵族</h3>
+                            <p class="store-bridf store-bridf-max">
+                                各种游戏特权，价值万元月礼包、踢人、经验加成
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="蓝钻贵族" src="./img/13.hov.png" />蓝钻贵族
+                            </h4>
+                            <div class="price">
+                                <p>
+                                    <em>10 </em>元/月<span id="mobile_price">，手机短信：<em>15 </em>元/月
+                  </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                尊享腾讯各种游戏特权，每月价值万元礼包任领，有QQ游戏踢人、经验加成强大功能！
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 跳转至旧版的业务 -->
+                                <a id="a_self_xxqgame" href="/qqgame/index.shtml?aid=pay.qqgame&amp;ADTAG=pay.service.qqgame.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="SVIP+K歌" src="./img/14.png" />
+                            <h3>SVIP+K歌</h3>
+                            <p class="store-bridf">
+                                SVIP+全民K歌身份铭牌,畅享超级会员和全民K歌VIP所有特权<span>...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="SVIP+K歌" src="./img/14.hov.png" />SVIP+K歌
+                            </h4>
+                            <div class="price">
+                                <p><em>35 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                SVIP+全民K歌身份铭牌,畅享超级会员和全民K歌VIP所有特权
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_skqvpgg" href="/ipay/index.shtml?c=skqvpgg&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="CF会员" src="./img/15.png" />
+                            <h3>CF会员</h3>
+                            <p class="store-bridf store-bridf-max">
+                                经验加成、踢人防踢、中途退场无惩罚
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="CF会员" src="./img/15.hov.png" />CF会员
+                            </h4>
+                            <div class="price">
+                                <p>
+                                    <em>30 </em>元/月<span id="mobile_price">，手机短信：<em>30 </em>元/月
+                  </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="">
+                                等级成长、VIP标识、经验加成、特权道具、跨阵营发起退出、中途退场无惩罚、商城专区、官方活动奖励加成、VIP弹夹加成等！<span>...</span>
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 跳转至旧版的业务 -->
+                                <a id="a_self_cfclub" href="/cf/index.shtml?aid=pay.cf&amp;ADTAG=pay.service.cf.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="付费音乐包" src="./img/16.png" />
+                            <h3>付费音乐包</h3>
+                            <p class="store-bridf store-bridf-max">
+                                尊享付费音乐下载300首/月、SQ音乐试听下载
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="付费音乐包" src="./img/16.hov.png" />付费音乐包
+                            </h4>
+                            <div class="price">
+                                <p>
+                                    <em>8 </em>元/月<span id="mobile_price">，手机短信：<em>10 </em>元/月
+                  </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                付费音乐包尊享SQ音乐试听、300首/月付费音乐下载等特权。
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_qqmsey" href="/ipay/index.shtml?c=qqmsey&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 17 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0px">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="DNF黑钻" src="./img/17.png" />
+                            <h3>DNF黑钻</h3>
+                            <p class="store-bridf store-bridf-max">
+                                疲劳上限增加、通关经验奖励、翻牌奖励
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="DNF黑钻" src="./img/17.hov.png" />DNF黑钻
+                            </h4>
+                            <div class="price">
+                                <p><em>20 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                地下城与勇士黑钻贵族，疲劳上限增加、通关经验奖励、通关翻牌奖励和尊贵游戏标识。
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 跳转至旧版的业务 -->
+                                <a id="a_self_dnfhz" href="/dnf/index.shtml?aid=pay.dnf&amp;ADTAG=pay.service.dnf.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="蓝钻豪华版" src="./img/18.png" />
+                            <h3>蓝钻豪华版</h3>
+                            <p class="store-bridf store-bridf-max">
+                                尊享“百元大礼包”、购物八折、等级加速、负分清零
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="蓝钻豪华版" src="./img/18.hov.png" />蓝钻豪华版
+                            </h4>
+                            <div class="price">
+                                <p><em>15 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                蓝钻豪华版尊享“百元大礼包”、购物8折、等级加速、“负分清零”等特权！
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 跳转至旧版的业务 -->
+                                <a id="a_self_xxzxgp" href="/qqgp/index.shtml?aid=pay.qqgp&amp;ADTAG=pay.service.qqgp.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 19 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="飞车紫钻" src="./img/19.png" />
+                            <h3>飞车紫钻</h3>
+                            <p class="store-bridf store-bridf-max">
+                                踢人防踢，经验加成，专属道具与任务
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="飞车紫钻" src="./img/19.hov.png" />飞车紫钻
+                            </h4>
+                            <div class="price">
+                                <p>
+                                    <em>10 </em>元/月<span id="mobile_price">，手机短信：<em>15 </em>元/月
+                  </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                QQ飞车踢人防踢，经验加成，专属道具与任务，疯狂折扣等特权！
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 跳转至旧版的业务 -->
+                                <a id="a_self_qqfczz" href="/ipay/index.shtml?c=qqfczz&amp;ADTAG=pay.service.speed.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 20 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="微云会员" src="./img/20.png" />
+                            <h3>微云会员</h3>
+                            <p class="store-bridf">
+                                享3TB存储空间，每日极速上传20GB ，视频极速加载等优享特权！<span>...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="微云会员" src="./img/20.hov.png" />微云会员
+                            </h4>
+                            <div class="price">
+                                <p>
+                                    <em>10 </em>元/月<span id="mobile_price">，手机短信：<em>15 </em>元/月
+                  </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                享3TB存储空间，每日极速上传20GB ，视频极速加载等优享特权！
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_wyclub" href="/ipay/index.shtml?c=wyclub&amp;aid=pay.service&amp;ADTAG=pay.service.service.self&amp;nl=!3,6,9,12&amp;nt=!month" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 21 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="超级影视VIP" src="./img/21.png" />
+                            <h3>超级影视VIP</h3>
+                            <p class="store-bridf">
+                                尊享TV云视听极光、手机、电脑、Pad四屏观影特权<span>...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="超级影视VIP" src="./img/21.hov.png" />超级影视VIP
+                            </h4>
+                            <div class="price">
+                                <p><em>50 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                精彩影片随心看，热播大剧天天更，超高清1080P/4K画质，享受私人影院体验
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_qetvqv" href="/ipay/index.shtml?c=tskjyby,txsp&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 22 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="炫舞紫钻" src="./img/22.png" />
+                            <h3>炫舞紫钻</h3>
+                            <p class="store-bridf store-bridf-max">
+                                踢人防踢、对局经验独享加成
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="炫舞紫钻" src="./img/22.hov.png" />炫舞紫钻
+                            </h4>
+                            <div class="price">
+                                <p><em>20 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                QQ炫舞踢人防踢功能、对局经验独享加成、紫钻贵族礼包免费送等特权！
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 跳转至旧版的业务 -->
+                                <a id="a_self_qqxwzz" href="/x5/index.shtml?aid=pay.x5&amp;ADTAG=pay.service.x5.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 23 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="微云超级会员" src="./img/23.png" />
+                            <h3>微云超级会员</h3>
+                            <p class="store-bridf">
+                                享6T超大存储空间，更享极速上传、视频加速能尊享特权<span>...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="微云超级会员" src="./img/23.hov.png" />微云超级会员
+                            </h4>
+                            <div class="price">
+                                <p><em>30 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">
+                                享6T超大存储空间，更享极速上传、视频加速能尊享特权
+                            </p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_wycjhy" href="/ipay/index.shtml?c=wycjhy&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 24 -->
+            <div class="store" block="list" style="cursor: pointer">
+                <div class="father" block="slide" style="position: relative; top: 0">
+                    <div class="store-control" block="face">
+                        <div class="box_store-info">
+                            <img _src="" lazy="" alt="星阅卡" src="./img/24.png" />
+                            <h3>星阅卡</h3>
+                            <p class="store-bridf store-bridf-max">波动星球星阅卡包月福利</p>
+                        </div>
+                    </div>
+                    <div class="store-content">
+                        <div class="store-intro">
+                            <h4>
+                                <img _src="" lazy="" alt="星阅卡" src="./img/24.hov.png" />星阅卡
+                            </h4>
+                            <div class="price">
+                                <p><em>12 </em>元/月</p>
+                            </div>
+                        </div>
+                        <div class="store-details">
+                            <p class="store-details-max">波动星球星阅卡包月福利</p>
+                        </div>
+                        <div class="store-action">
+                            <div class="btn_group_s cf">
+                                <!-- 接入到新版的业务 -->
+                                <a id="a_self_mon1099" href="/ipay/index.shtml?c=mon1099&amp;aid=pay.service&amp;ADTAG=pay.service.service.self" class="btn-com-s" link="self" title="开通服务"><span>开通</span></a>
+                                <div class="btns-join cf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+            Copyright © 1998 - 2021 Tencent. All Rights Reserved
+            <br> 腾讯公司
+            <a class="clink" target="_blank" href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml">版权所有</a>
+            <a class="clink" target="_blank" href="http://www.qq.com/contract.shtml">服务条款</a>
+            <a href="http://privacy.qq.com" target="_blank" class="clink">隐私政策</a>
+        </p>
+    </div>
+</body>
+
+</html>

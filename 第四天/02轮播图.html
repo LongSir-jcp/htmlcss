@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 1920px;
+            height: 480px;
+            overflow: hidden;
+        }
+        .c1{
+            width: calc(1920px*4);
+            height: 480px;
+            display: flex;
+            animation: identifier 5s linear infinite;
+        }
+        img{
+            width: 1920px;
+            height: 480px;
+            /* float: left; */
+        }
+        @keyframes identifier {
+            0%{
+                margin-left: 0;
+            }
+            30%{
+                margin-left: 0;
+            }
+            33%{
+                margin-left: -1920px;
+            }
+            63%{
+                margin-left: -1920px;
+            }
+            66%{
+                margin-left: calc(-1920px*2);
+            }
+            96%{
+                margin-left: calc(-1920px*2);
+            }
+            100%{
+                margin-left: calc(-1920px*3);
+            }
+            /* 100%{
+                margin-left: 0;
+                
+            } */
+        }
+    </style>
+</head>
+<body>
+    <!-- https://img02.hua.com/slider/20_xingzuo_chunv_pc.jpg
+    https://img02.hua.com/slider/20_xingzuo_chunv_pc.jpg
+    https://img02.hua.com/slider/20_xingzuo_chunv_pc.jpg -->
+        <div class="box">
+            <div class="c1">
+                <img src="./../../壁纸/AAA.jpg" alt="">
+                <img src="./../../壁纸/bbb.jpg" alt="">
+                <img src="./../../壁纸/ccc.jpg" alt="">
+                <img src="./../../壁纸/AAA.jpg" alt="">
+
+            </div>
+        </div>
+</body>
+</html>

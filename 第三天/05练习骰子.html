@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first{
+            width: 300px;
+            height: 300px;
+            background-color: #aaa;
+            border: 3px solid #eee;
+            border-radius: 20px;
+            padding: 14px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .second{
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 50%;
+            /* 五点 */
+            /* align-items: center;
+            align-self: center; */
+        }
+        .first>div{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <div>
+            <div class="second"></div>
+            <div class="second "></div>
+            <!-- <div class="second "></div> -->
+        </div>
+
+        <!-- 五点 -->
+        <!-- <div class="second"></div> -->
+        <div>
+            <div class="second "></div>
+            <div class="second "></div>
+            <!-- <div class="second "></div> -->
+        </div>
+            
+    </div>
+</body>
+</html>

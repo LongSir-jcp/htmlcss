@@ -1,0 +1,274 @@
+.box{
+    width: 1518.4px;
+    height: 937.4px;
+    color: black;
+    background-color: white;
+    font-size: 14px;
+    position: relative;
+
+}
+.box1{
+    width: 990px;
+    height: 42px;
+padding: 5px 0;
+margin: 0px auto;
+}
+.span1{
+    color: blue;
+}
+.box1 .span1:hover {
+        color: crimson;
+        text-decoration: underline;
+}
+.box2{
+    width: 990px;
+    height: 680px;
+    margin: 0 auto;
+    border: 1px solid rgb(196, 194, 194);
+}
+.box3{
+    width:209px;
+    height: 680.2px;
+    border-right: 1px solid rgb(196, 194, 194);
+}
+.box4{
+    width: 159px;
+    height: 475.8px;
+    margin: 0 25px;
+    padding: 30px 0 20px;
+}
+.box5{
+    width: 159px;
+    height: 136px;
+    margin: 0 auto;
+    position: relative;
+}
+.box6{
+    width: 90px;
+    height: 90px;
+  position: absolute;
+  left:35px;
+}
+.box7{
+    width: 159px;
+    height: 23.2px;
+    font-size: 18px;
+    text-align: center;
+    
+ position: absolute;
+ top:97px;
+}
+.box5a{
+    text-decoration: none;
+     
+    position: absolute;
+    top:120px;
+    left:42px;
+}
+.box5 .box5a:hover{
+    text-decoration: underline;
+}
+.box8{
+    width: 159px;
+    height: 194.4px;
+   
+    font-size: 12px;
+    color: gray;
+    position: absolute;
+    top: 216px;
+    left: 291px;
+    
+}
+.box9{
+    width: 159px;
+    height: 15.2px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 0px;
+}
+.box10{
+    margin: 20px;
+    position: relative;
+    left: 10px;
+    top:-2px;
+}
+.box11{
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+.box12{
+    width: 12px;
+    height: 13px;
+    margin: 0 auto;
+    position: relative;
+    top:1.5px;
+}
+
+
+.box13{
+    width: 209px;
+    height: 40.4px;
+    background-image: url(./源图片/蓝色背景图.png);
+    position: relative;
+    top:325px;
+    right: 25px;
+    border: 0px;
+   
+}
+.box14{
+    width: 211px;
+    height: 149px;
+    position: relative;
+    top:325px;
+    right: 26px;
+}
+.box15{
+    width: 550px;
+    height: 175px;
+    margin:0 114.2px;
+    font-size: 14px;
+    position: absolute;
+    top: 53px;
+    left: 474px;
+    padding: 15px 0 20px;
+    border-bottom: 1px solid rgb(196, 194, 194);
+}
+.box16{
+    width: 550px;
+    height: 30px;
+    margin: -10px 0 15px;
+line-height: 30px;
+    
+}
+.box17father{
+  
+    display: flex;
+    position: relative;
+    top: -10px;
+    
+}
+.box171:hover , .box172:hover , .box173:hover , .box174:hover{
+    border-color: #2a69b6;
+}
+.box171 , .box172 , .box173 , .box174{
+    width: 128px;
+    height: 128px;
+    margin: 0 0 10px 10px;
+    border: 1px solid rgb(196, 194, 194);
+    position: relative;
+    left: -10px;
+}
+.box18{
+    width: 126px;
+    height: 59px;
+    border-bottom: 1px dashed rgb(196, 194, 194);
+    padding:36px 0 0 0 ;
+    margin: 0 1 0;
+    
+}
+.box19{
+    width: 126px;
+    height: 24px;
+    text-align: center;
+ 
+
+ 
+}
+.box20{
+    width: 128px;
+    height: 32px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 0px;
+}
+.box21{
+    position: relative;
+    top:-5px;
+display: none;
+}
+.box22{
+    width: 551px;
+    height: 308.4px;
+    position: absolute;
+    top:263px;
+    left: 588px;
+    padding: 20px 0 40px;
+}
+.QQqianbao1 , .QQqianbao2 , .QQqianbao3 , .QQqianbao4  {
+    margin:0 0 0 10px ;
+    width: 128px;
+    height: 38px;
+    border: 1px solid rgb(196, 194, 194);
+    text-align: center;
+    line-height: 38px;
+    font-size: 14px;
+}
+.QQfather{
+    display: flex;
+}
+.box23Q1{
+    width: 551px;
+    height: 23.2px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 23.2px;
+    position: absolute;
+    top:93px;
+   
+
+}
+.box23Q2 , .box23Q3 , .box23Q4  {
+    width: 551px;
+    height: 23.2px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 23.2px;
+    position:absolute;
+    top:93px;
+    display: none;
+}
+.box24{
+    width: 140px;
+    height: 140px;
+    padding: 9px;
+    border: 1px solid rgb(196, 194, 194);
+    margin: 0 auto;
+    position: relative;
+    top:30px;
+}
+.box25{
+    width: 212px;
+    height: 15.2px;
+    margin:0 auto;
+    position: relative;
+    top:35px;
+}
+.layer_rt .current a:link, .layer_rt .current a:visited{
+    background-image: url(https://imgcache.qq.com/bossweb/pay/pay_v4/images/nav_abg.png);
+    color: #1784b2;
+}
+.layer_rt .current a:hover, .layer_rt .current a:active{
+    background-image: url(https://imgcache.qq.com/bossweb/pay/pay_v4/images/nav_abg.png);
+    color: #1784b2;
+}
+.footer{
+    position: relative;
+    width: 100%;
+    height: 91.8px;
+    bottom: 10px;
+}
+.footer p{
+    width: 100%;
+    height: 44.8px;
+    text-align: center;
+    line-height: 23px;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 22px;
+    margin-bottom: 25px;
+}

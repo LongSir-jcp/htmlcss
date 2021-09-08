@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 微软雅黑, 宋体, Tahoma;
+}
+/* h2{
+    line-height: 30px;
+    text-align: center;
+} */
+
+#index_advtop{
+    width: 100%;
+    height: 440px;
+    position: absolute;
+    top: 23px;
+    overflow: hidden;
+}
+
+.layer_rt .current a:link, .layer_rt .current a:visited{
+    background-image: url(https://imgcache.qq.com/bossweb/pay/pay_v4/images/nav_abg.png);
+    color: #1784b2;
+}
+.layer_rt .current a:hover, .layer_rt .current a:active{
+    background-image: url(https://imgcache.qq.com/bossweb/pay/pay_v4/images/nav_abg.png);
+    color: #1784b2;
+}
+
+
+.ad_all{
+    width: 100%;
+    height: 440px;
+    text-align: center;
+    overflow: hidden;
+}
+#imgList{
+    list-style: none;
+    width: 100%;
+}
+.ad_all #imgList li{
+    /* li标签从横变竖 */
+    float: left;
+}
+/* 超链接div */
+#navDiv{
+    position: absolute;
+    bottom: 60px;
+    /* left: 910px; */
+}
+/* 超链接 */
+#navDiv a{
+    float: left;
+    width:10px;
+    height: 10px;
+    /* 设置按钮间距 */
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: black;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+/* 鼠标移入样式 */
+#navDiv a:hover{
+    background-color: red;
+}
+
+.wrap_index{
+    width: 100%;
+    height: 510px;
+    background-color: white;
+    position: absolute;
+    top: 430px;
+    opacity: 0.8;
+}
+.content{
+    position: relative;
+    width: 990px;
+    height: 274.2px;
+    margin: 0 auto;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.product_pay{
+    width: 321px;
+    height: 244.2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/* #product_paydqb, #product_paygame, #product_payservice{
+    width: 321px;
+    height: 244.2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+} */
+/* Q币 */
+.paydqb_top{
+    width: 321px;
+    height: 51.2px;
+}
+.paydqb_title1{
+    width: 321px;
+    height: 32px;
+    display: flex;
+    box-sizing: border-box;
+}
+.qb_title{
+    width: 150px;
+    height: 32px;
+    margin: 0 auto;
+    margin-left: 90px;
+    overflow: hidden;
+    display: block;
+}
+.paydqb_title1 .qb_title{
+    background-image: url(../xm_img/dqb.png);
+}
+.qb_more{
+    width: 60px;
+    justify-content: flex-end;
+    text-align: right;
+    margin-top: 10px;
+    overflow: hidden;
+    color: #666;
+    font-size: 12px;
+    font-weight: 400;
+}
+.paydqb_title2{
+    width: 321px;
+    height: 19.2px;
+    padding: 3px 10px 0px 10px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    line-height: 1.6;
+}
+.paydbq_ico{
+    width: 321px;
+    height: 193px;
+}
+.paydbq_ico .qb_list{
+    width: 295px;
+    height: 180px;
+    margin-top: 10px;
+    margin-left: 26px;
+}
+.paydbq_ico ul li{
+    width: 66px;
+    margin: 0 10px;
+    text-align: center;
+    float: left;
+    padding: 3px 0;
+    font-size: 12px;
+}
+
+/* 游戏 */
+.paygame_top{
+    width: 321px;
+    height: 51.2px;
+}
+.paygame_title1{
+    width: 321px;
+    height: 32px;
+    display: flex;
+    box-sizing: border-box;
+}
+.ga_title{
+    width: 150px;
+    height: 32px;
+    margin: 0 auto;
+    margin-left: 90px;
+    overflow: hidden;
+    display: block;
+}
+.paygame_title1 .ga_title{
+    background-image: url(../xm_img/ga.png);
+}
+.ga_more{
+    width: 60px;
+    justify-content: flex-end;
+    text-align: right;
+    margin-top: 10px;
+    overflow: hidden;
+    color: #666;
+    font-size: 12px;
+    font-weight: 400;
+}
+.paygame_title2{
+    width: 321px;
+    height: 19.2px;
+    padding: 3px 10px 0px 10px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    line-height: 1.6;
+}
+.paygame_ico{
+    width: 321px;
+    height: 193px;
+}
+.paygame_ico .ga_list{
+    width: 295px;
+    height: 180px;
+    margin-top: 10px;
+    margin-left: 26px;
+}
+.paygame_ico ul li{
+    width: 66px;
+    margin: 0 10px;
+    text-align: center;
+    float: left;
+    padding: 3px 0;
+    font-size: 12px;
+}
+.paygame_ico .ga_list li a span img{
+    margin-top: 7px;
+}
+.paygame_ico .ga_list li a>.s{
+    width: 64px;
+    height: 64px;
+    background-image: url(../xm_img/list_border_link.png);
+    display: block;
+}
+.paygame_ico .ga_list li a>.s:hover{
+    background-image: url(../xm_img/list_border_hover.png);
+    display: block;
+}
+
+
+/* 包月服务 */
+.paysvc_top{
+    width: 321px;
+    height: 51.2px;
+}
+.paysvc_title1{
+    width: 321px;
+    height: 32px;
+    display: flex;
+    box-sizing: border-box;
+}
+.sr_title{
+    width: 150px;
+    height: 32px;
+    margin: 0 auto;
+    margin-left: 90px;
+    overflow: hidden;
+    display: block;
+}
+.paysvc_title1 .sr_title{
+    background-image: url(../xm_img/svc.png);
+}
+.sr_more{
+    width: 60px;
+    justify-content: flex-end;
+    text-align: right;
+    margin-top: 10px;
+    overflow: hidden;
+    color: #666;
+    font-size: 12px;
+    font-weight: 400;
+}
+.paysvc_title2{
+    width: 321px;
+    height: 19.2px;
+    padding: 3px 10px 0px 10px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    line-height: 1.6;
+}
+.paysvc_ico{
+    width: 321px;
+    height: 193px;
+}
+.paysvc_ico .sr_list{
+    width: 295px;
+    height: 180px;
+    margin-top: 10px;
+    margin-left: 26px;
+}
+.paysvc_ico ul li{
+    width: 66px;
+    margin: 0 10px;
+    text-align: center;
+    float: left;
+    padding: 3px 0;
+    font-size: 12px;
+}
+.paysvc_ico .sr_list li a span img{
+    margin-top: 7px;
+}
+.paysvc_ico .sr_list li a>.s{
+    width: 64px;
+    height: 64px;
+    background-image: url(../xm_img/list_border_link.png);
+    display: block;
+}
+.paysvc_ico .sr_list li a>.s:hover{
+    background-image: url(../xm_img/list_border_hover.png);
+    display: block;
+}
+
+.wrap_index .content .qb_more:hover, .ga_more:hover, .sr_more:hover{
+    color: #000000;
+    text-decoration: underline;
+}
+
+.footer{
+    position: relative;
+    width: 100%;
+    height: 91.8px;
+    bottom: 10px;
+}
+.footer p{
+    width: 100%;
+    height: 44.8px;
+    text-align: center;
+    line-height: 23px;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 22px;
+    margin-bottom: 25px;
+}

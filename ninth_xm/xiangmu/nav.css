@@ -1,0 +1,57 @@
+.header_column {
+    width: 100%;
+    height: 78px;
+    box-sizing: border-box;
+    position: relative;
+    /* top: 0; */
+    border-bottom: 1px solid #B4B4B4;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    /* 设置为半透明 */
+    opacity: 0.8;
+}
+
+.header_layer {
+    width: 990px;
+    height: 77px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.layer_lt {
+    width: 242px;
+    height: 64px;
+    line-height: 77px;
+    margin-left: -10px;
+}
+
+.layer_rt {
+    /* width: 110px; */
+    /* height: 77px; */
+    margin-right: -10px;
+    line-height: 77px;
+}
+.layer_rt .current{
+    background-color: #fff;
+}
+.layer_rt li{
+    float: left;
+    width: 110px;
+    margin-right: 1px;
+}
+.layer_rt a{
+    font-size: 17px;
+    width: 110px;
+    color: #000;
+    font-weight: 400;
+    text-align: center;
+    float: left;
+}
+.layer_rt a:hover, .layer_rt a:active{
+    background-image: url(https://imgcache.qq.com/bossweb/pay/pay_v4/images/nav_abg.png);
+    color: #1784b2;
+}

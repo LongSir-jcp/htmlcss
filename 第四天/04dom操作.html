@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+</head>
+<body>
+    <div class="father">
+        <div class="child1">1</div>
+        <div class="child1">2</div>
+    </div>
+
+    <!-- 1.获取节点元素 
+    2.创建元素
+    3.修改元素内容
+    4.修改元素样式，颜色，大小，位置
+    5.数据切换
+    6.切换页面
+    7.事件 事件三要素 ：事件源， 事件类型，时间处理函数
+    8.点击事件 鼠标移入 移出事件
+    9.定时器
+    -->
+    <script>
+        // 获取一个节点元素
+        var ele = document.querySelector('.father')
+        console.log(ele)
+
+        // 获取多个元素
+        var child1 = document.querySelectorAll('.child1')
+        console.log(child1[1])
+
+        // 1.创建元素
+        var div1=document.createElement('div')
+
+        // 添加内容
+        var img=document.createElement('img')
+
+        div1.innerHTML='展示信息'
+        div1.innerHTML=img
+        console.log(div1,'1234')
+    </script>
+</body>
+</html>

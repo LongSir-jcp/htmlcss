@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://pay.qq.com/favicon.ico" />
+    <title>游戏充值</title>
+    <link rel="stylesheet" href="../layui/css/layui.css" />
+    <link rel="stylesheet" href="./nav.css" />
+    <link rel="stylesheet" href="./top_menu.css" />
+    <style>
+      .layer_rt .current a:link,
+      .layer_rt .current a:visited {
+        background-image: url(https://imgcache.qq.com/bossweb/pay/pay_v4/images/nav_abg.png);
+        color: #1784b2;
+      }
+      .layer_rt .current a:hover,
+      .layer_rt .current a:active {
+        background-image: url(https://imgcache.qq.com/bossweb/pay/pay_v4/images/nav_abg.png);
+        color: #1784b2;
+      }
+      body {
+        -x-system-font: none;
+        font: 12px/20px tahoma, "宋体";
+        font-weight: normal;
+        color: #333;
+        background: #fff;
+        overflow-x: hidden;
+      }
+      .all {
+        margin-top: 4px;
+        clear: both;
+        width: 990px;
+        margin: 0 auto;
+      }
+      .first {
+        margin-top: 13px;
+        border-bottom: 1px solid #dbe2e8;
+        border-right: none;
+        border: 1px solid #dbe2e8;
+        display: block;
+      }
+      .first li {
+        height: 190px;
+        width: 236px;
+        display: block;
+        float: left;
+        border-right: 1px solid #dbe2e8;
+        border-bottom: 1px solid #eeeeee;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+      }
+      h3 {
+        margin: 0;
+        padding: 0;
+        font-style: normal;
+      }
+      p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+      }
+      div {
+        text-align: left;
+        display: block;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        font-style: normal;
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+      }
+      .g_project {
+        margin: 7px;
+        position: absolute;
+        z-index: 0;
+      }
+      .g_project h3 {
+        padding-top: 6px;
+        font-size: 12px;
+      }
+      .g_project p {
+        color: #999;
+        margin: 0;
+        padding: 0;
+        font-style: normal;
+      }
+      .g_project .btn_area {
+        right: 0px;
+        bottom: 5px;
+        position: absolute;
+        z-index: 10;
+      }
+      a.btn_com_two {
+        font: 12px/20px tahoma, "宋体";
+        font-weight: normal;
+        list-style-type: none;
+        font-style: normal;
+        text-align: left;
+        color: #0b5ba5;
+        text-decoration: none;
+        background: url(//imgcache.qq.com/bossweb/pay/public/publicbg.png)
+          no-repeat 0 -346px;
+        display: inline-block;
+        cursor: pointer;
+        box-shadow: 0.4px 0.6px 2px #444444;
+      }
+      a.btn_com_two span {
+        background: url(//imgcache.qq.com/bossweb/pay/public/publicbg.png)
+          no-repeat right -346px;
+        height: 28px;
+        line-height: 28px;
+        display: inline-block;
+        padding: 0 8px;
+        margin-left: 2px;
+        color: #333;
+        text-decoration: none;
+      }
+      a.btn_com_two span:hover {
+        opacity: 0.6;
+      }
+      .btn_area span {
+        background: url(//imgcache.qq.com/bossweb/pay/public/publicbg.png)
+          no-repeat right -346px;
+        height: 28px;
+        line-height: 28px;
+        display: inline-block;
+        padding: 0 8px;
+        margin-left: 2px;
+        color: #333;
+        text-decoration: none;
+      }
+      .second {
+        clear: both;
+        margin-top: 210px;
+      }
+      .second .choice {
+        height: 50px;
+        background: #e4edfb;
+        border: 1px solid #dbe2e8;
+        border-bottom: 1px solid #e4edfb;
+        width: 945px;
+        margin-left: 42px;
+      }
+      .second .choice h2 {
+        font: 12px/20px tahoma, "宋体";
+        color: #333;
+        text-align: left;
+        margin: 0;
+        font-style: normal;
+        float: left;
+        font-size: 16px;
+        font-family: "微软雅黑";
+        padding: 15px 0 0 15px;
+        font-weight: normal;
+        width: 250px;
+      }
+      .tab a:hover {
+        text-decoration: none;
+      }
+      .tab a.active {
+        font-weight: 700;
+      }
+
+      .tab a {
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin-right: 30px;
+        position: relative;
+        color: #333;
+      }
+      a:link,
+      a:visited {
+        /* color: #0b5ba5; */
+        text-decoration: none;
+      }
+
+      用户代理样式表 a:-webkit-any-link {
+        color: -webkit-link;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .tab a.active .i_triangle_t {
+        display: block;
+      }
+      .tab .i_triangle_t {
+        display: none;
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        _bottom: 10px;
+        _left: 30px;
+        margin-left: -10px;
+        width: 0;
+        height: 0;
+        border: 10px solid #fff;
+        border-color: #fff transparent transparent transparent;
+        border-color: transparent transparent #fff transparent;
+        border-style: dashed dashed solid dashed;
+        line-height: 0;
+        vertical-align: middle;
+      }
+      .second .searchbox {
+        width: 540px;
+        float: right;
+      }
+      .searchbox {
+        margin-top: 10px;
+      }
+      .search_opt .search_opt_tl {
+        background: #fff;
+        display: inline;
+        float: left;
+        width: 200px;
+      }
+      .searchbox .btn_search {
+        background: #f0f0f0;
+        border: none;
+        border-left: 1px solid #d9d9d9;
+        color: #666;
+        float: right;
+        cursor: pointer;
+        font-family: "微软雅黑";
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        width: 55px;
+      }
+      .searchbox .ipt_search {
+        border: 0 none;
+        color: #999999;
+        font-size: 12px;
+        line-height: 26px;
+        padding: 2px 5px;
+        height: 26px;
+        vertical-align: middle;
+        width: 232px;
+      }
+      .searchbox .search_cont {
+        float: left;
+        line-height: 30px;
+        height: 30px;
+        padding-left: 10px;
+        font-size: 12px;
+        width: 220px;
+        overflow: hidden;
+        color: #999;
+      }
+      .search_cont a {
+        margin: 0 3px;
+        text-decoration: underline;
+      }
+      .search_cont a:hover {
+        color: red;
+      }
+      #hot_word {
+        margin: 0;
+        padding: 0;
+        font-style: normal;
+      }
+      .second table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+        text-align: left;
+        display: block;
+      }
+      tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+        position: absolute;
+        margin-left: 41px;
+      }
+      tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+      }
+      .second table td {
+        line-height: 18px;
+        border: 1px solid #dbe2e8;
+        width: 236px;
+        vertical-align: top;
+      }
+      td {
+        padding: 0;
+        border: 0;
+        font-size: 12px;
+        line-height: 1.5em;
+      }
+      .game_products {
+        position: relative;
+        z-index: 0;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 235px;
+        height: 100px;
+        display: block;
+      }
+      .second .g_opreat {
+        height: 102px;
+        position: relative;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 236px;
+      }
+      .g_opreat:hover {
+        background-color: rgb(231, 231, 231);
+      }
+      .g_opreat:hover .pay_this_game {
+        display: block;
+      }
+      .pay_this_game {
+        width: 20%;
+        height: 22px;
+        background-color: rgb(65, 147, 219);
+        color: white;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 22px;
+        position: absolute;
+        bottom: 6px;
+        left: 100px;
+        display: none;
+      }
+      .pay_this_game:hover{
+        opacity: 0.7;
+      }
+      .second .g_opreat img {
+        top: 20px;
+        left: 15px;
+        width: 60px;
+        height: 50px;
+        display: inline-block;
+      }
+      .g_opreat i,
+      .g_opreat img {
+        position: absolute;
+        left: 10px;
+        top: 30px;
+        display: block;
+        width: 60px;
+        height: 50px;
+      }
+      .second .g_opreat_info {
+        height: 100px;
+        margin-left: 90px;
+      }
+      .g_opreat_info {
+        margin: 0 10px 0 85px;
+        height: 110px;
+        overflow: hidden;
+      }
+      .second .g_opreat_info h3 {
+        padding-top: 25px;
+      }
+      .g_opreat_info h3 {
+        padding-top: 20px;
+        font-size: 14px;
+        color: #000;
+      }
+      .second .g_opreat_info p {
+        color: #999;
+      }
+      div {
+        text-align: left;
+      }
+      .clearfix {
+        display: block;
+      }
+      .searchbox .search_opt {
+        height: 30px;
+        width: 300px;
+        float: left;
+        border: #b0cce4 solid 1px;
+        background: #fff;
+        position: relative;
+        z-index: 300;
+      }
+      .clearfix {
+        display: block;
+      }
+
+      .footer {
+        position: relative;
+        width: 100%;
+        height: 136.8px;
+        bottom: -425px;
+      }
+      .footer p {
+        width: 100%;
+        height: 44.8px;
+        text-align: center;
+        line-height: 23px;
+        font-size: 12px;
+        position: absolute;
+        margin-top: 22px;
+        margin-bottom: 25px;
+      }
+    </style>
+  </head>
+  <div class="top_menu">
+    <div class="txt_left">
+      <div class="left_ct">
+        <a href="">手机版</a>
+      </div>
+    </div>
+    <div class="txt_right">
+      <div class="right_ct">
+        <span class="style1">欢迎光临！</span>
+        <a href="">登录</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 导航栏 -->
+  <div class="header_column">
+    <div class="header_layer">
+      <div class="layer_lt">
+        <img
+          src="https://imgcache.qq.com/bossweb/pay/pay_v4/images/public/logo.png"
+          alt=""
+        />
+      </div>
+      <div class="layer_rt">
+        <ul>
+          <!-- 自己做的哪个页面，就把class="current"换到自己做的页面的li中 -->
+          <!-- 如果不想改的话，需要自己重新命名，然后到css里面去修改相关数据 -->
+          <li>
+            <a href="./index.html" title="首 页">首 页</a>
+          </li>
+          <li>
+            <a href="" title="Q币充值">Q币充值</a>
+          </li>
+          <li class="current">
+            <a href="./gamepay.html" title="游戏充值">游戏充值</a>
+          </li>
+          <li>
+            <a href="" title="服务开通">服务开通</a>
+          </li>
+          <li>
+            <a href="" title="我的帐户">我的帐户</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <body>
+    <div class="all">
+      <div class="first">
+        <ul id="recomend_list">
+          <div id="game_recomend_list">
+            <li>
+              <div class="g_project">
+                <img
+                  src="https://imgcache.qq.com/bossweb/pay/images_ad/tjgame_ad/a_game_cfdq.jpg"
+                  alt="图图"
+                />
+                <h3>cf点券</h3>
+                <p>三亿鼠标的枪战梦</p>
+                <div class="btn_area">
+                  <a
+                    class="btn_com_two"
+                    href="https://pay.qq.com/ipay/index.shtml?c=cfdq&aid=pay.game.open&ADTAG=pay.game.list"
+                  >
+                    <span>立即充值</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="g_project">
+                <img
+                  src="https://imgcache.qq.com/bossweb/pay/images_ad/tjgame_ad/a_game_ylzt.jpg"
+                  alt="图图"
+                />
+                <h3>御龙在天</h3>
+                <p>第一国战网游</p>
+                <div class="btn_area">
+                  <a
+                    class="btn_com_two"
+                    href="https://pay.qq.com/ipay/index.shtml?c=ylzt&aid=pay.game.open&ADTAG=pay.game.list"
+                  >
+                    <span>立即充值</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="g_project">
+                <img
+                  src="https://imgcache.qq.com/bossweb/pay/images_ad/tjgame_ad/a_game_loldq.jpg"
+                  alt="图图"
+                />
+                <h3>英雄联盟</h3>
+                <p>英雄对战MOBA竞技网游</p>
+                <div class="btn_area">
+                  <a
+                    class="btn_com_two"
+                    href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.game.open&ADTAG=pay.game.list"
+                  >
+                    <span>立即充值</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="g_project">
+                <img
+                  src="https://imgcache.qq.com/bossweb/pay/images_ad/tjgame_ad/a_game_jldq.jpg"
+                  alt="图图"
+                />
+                <h3>剑灵</h3>
+                <p>在线最高角色扮演网游</p>
+                <div class="btn_area">
+                  <a
+                    class="btn_com_two"
+                    href="https://pay.qq.com/ipay/index.shtml?c=jldq&aid=pay.paygame.charge.jldq&ADTAG=pay.paygame.charge.jldq"
+                  >
+                    <span>立即充值</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div class="second">
+        <div class="choice serach">
+          <h2 class="tab" style="width: 250px">
+            <a href="javascript:(void 0);" id="pc_pay" class="active"
+              >游戏充值<i class="i_triangle_t"></i></a
+            ><a href="javascript:(void 0);" id="mobile_pay" class=""
+              >手游充值<i class="i_triangle_t"></i
+            ></a>
+          </h2>
+          <div class="searchbox clearfix" role="search">
+            <div class="search_opt clearfix" id="search_area">
+              <div class="search_opt_tl">
+                <input
+                  type="text"
+                  value="请您输入充值的游戏名称"
+                  class="ipt_search"
+                  id="search_input"
+                />
+              </div>
+              <input
+                type="button"
+                value="充值"
+                class="btn_search"
+                id="search_btn"
+              />
+              <div class="drawbox" id="list_div" style="display: none">
+                <ul id="select_list"></ul>
+              </div>
+            </div>
+            <div class="search_cont">
+              <p id="hot_word">
+                热门：
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=nbakdq&aid=pay.paygame.hot_word.nba2k&ch=qdqb,kj,weixin"
+                  title="NBA2KOL点券"
+                  >NBA2KOL点券</a
+                >
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=hltjcz&aid=pay.paygame.hot_word.hltjcz&ADTAG=pay.paygame.hot_word.hltjcz.self"
+                  title="逆战"
+                  >逆战</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <table id="pc_pay_list" style="display: block">
+          <tbody>
+            <tr>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/loldq/logo_m.png"
+                      alt="英雄联盟点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>英雄联盟点券</h3>
+                      <p>100 点券/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=dnfdq&aid=pay.paygame.dnf.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/dnfdq/logo_m.png"
+                      alt="DNF点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>DNF点券</h3>
+                      <p>100 DNF点/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/qqkdc/logo_m.png"
+                      alt="QQ飞车点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>QQ飞车点券</h3>
+                      <p>100 点券/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/cfdq/logo_m.png"
+                      alt="cf点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>CF点券</h3>
+                      <p>100 CF点/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/hltjcz/logo_m.png"
+                      alt="逆战点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>逆战点</h3>
+                      <p>100 逆战点/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/qqxw2/logo_m.png"
+                      alt="QQ炫舞点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>QQ炫舞两金币</h3>
+                      <p>100 金币/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/jldq/logo_m.png"
+                      alt="剑灵点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>剑灵点券</h3>
+                      <p>100 点券/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/tymyddh/logo_m.png"
+                      alt="天涯明月刀点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>天涯明月刀点券</h3>
+                      <p>100 点券/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/ylzt/logo_m.png"
+                      alt="御龙在天金子"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>御龙在天金子</h3>
+                      <p>100 金子/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/zqzxzhg/logo_m.png"
+                      alt="FIFAOL4点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>FIFAOL4点券</h3>
+                      <p>100 点券/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/hyzzol/logo_m.png"
+                      alt="火影忍者"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>火影忍者元宝</h3>
+                      <p>10 元宝/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/lfzldq/logo_m.png"
+                      alt="流放之路点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>流放之路点券</h3>
+                      <p>100 点券/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/dj2dy/logo_m.png"
+                      alt="刀剑2刀玉"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>刀剑2刀玉</h3>
+                      <p>100 刀玉/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/wcbydq/logo_m.png"
+                      alt="王朝霸域"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>王朝霸域点券</h3>
+                      <p>10 黄金/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/qqsgpay/logo_m.png"
+                      alt="三国点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>三国点券</h3>
+                      <p>10 三国点/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+              <td name="td" style="cursor: pointer" class>
+                <a
+                  href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.paygame.lol.outer&ch=qdqb,kj,weixin"
+                >
+                  <div class="g_opreat">
+                    <img
+                      src="https://imgcache.qq.com/bossweb/ipay/images/public/icons/ttds/logo_m.png"
+                      alt="天堂点券"
+                    />
+                    <div class="g_opreat_info">
+                      <h3>天堂点券</h3>
+                      <p>100 点券/元</p>
+                    </div>
+                    <div class="pay_this_game">充值</div>
+                  </div>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        Copyright © 1998 - 2021 Tencent. All Rights Reserved
+        <br />
+        腾讯公司
+        <a
+          class="clink"
+          target="_blank"
+          href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml"
+          >版权所有</a
+        >
+        <a class="clink" target="_blank" href="http://www.qq.com/contract.shtml"
+          >服务条款</a
+        >
+        <a href="//privacy.qq.com" target="_blank" class="clink">隐私政策</a>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+    <style>
+        /* div{
+            width: 100px;
+            height: 300px;
+            background-color: rosybrown;
+            position: fixed;
+            top: 100px;
+        }
+        p{
+
+        } */
+        .box{
+            width: 27px;
+            height: 205px;
+            position: fixed;
+            border: 1px solid red;
+            right: 20px;
+            bottom: 100px;
+        }
+        .box div{
+            width: 27px;
+            height: 42px;
+
+        }
+        .box img{
+            width: 20px;
+            height: 20px;
+        }
+        .img2{
+            display: none;
+        }
+        .box .box:hover .img2{
+            display: block;
+        }
+        .box .box:hover .img1{
+            display: none;
+        }
+        .box div{
+            position: relative;
+        }
+        #w1{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: -315px;
+            display: none;
+        }
+        .box div:hover #w1{
+            display: block;
+        }
+
+        /* .sa{
+            width: 100%;
+            height: 2000px;
+            background-color: rgb(27, 27, 94);
+        }
+        .sta{
+            width: 100%;
+            height: 100px;
+            background-color: rosybrown;
+            position: sticky;
+            top: 50px;
+        }
+        .sd{
+            width: 100%;
+            height: 2000px;
+            background-color: blue;
+        } */
+    </style>
+</head>
+<body>
+    <div></div>
+    <p></p>
+    <div class="box">
+        <div>
+            <img class="img1" src="" alt="">
+            <img class="img2" src="" alt="">
+            <img id="w1" src="" alt="">
+        </div>
+    </div>
+
+    <!-- 粘性定位 -->
+    <!-- <div class="sa"></div>
+    <div class="sta"></div>
+    <div class="sd"></div> -->
+</body>
+</html>

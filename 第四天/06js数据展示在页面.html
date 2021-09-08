@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06</title>
+</head>
+<body>
+
+    <div class="first"></div>
+    <div class="third"></div>
+
+
+    <script src="./00-源数据.js"></script>
+    <script>
+        function addelement(idv,arrProduct){
+            var element=document.querySelector(`.${idv}`)
+            var ele=document.createElement("span")
+            for(var index=0;index<arrProduct.length;index++){
+                ele.innerHTML=`
+                名字：${arrProduct[index].name} 
+                分类：${arrProduct[index].type}
+                价格：${arrProduct[index].price}
+                color：${arrProduct[index].color}
+                
+                `
+            }
+            element.appendChild(ele)
+        }
+        addelement("first",arrProduct)
+        addelement("third",arrProduct)
+
+        console.log(arrProduct)
+        var box=document.createElement('div')
+        var body=document.querySelector('body')
+        for(var index=0;index<arrProduct.length;index++){
+
+            var element=arrProduct[index];
+            console.log(element.name)
+            var div1=document.createElement('div')
+            div1.innerHTML=` <span> ${ arrProduct[index].name}</span>`
+            box.appendChild(div1)
+        }
+
+        body.appendChild(box)
+    </script>
+</body>
+</html>

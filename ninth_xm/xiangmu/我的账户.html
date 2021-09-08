@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://pay.qq.com/favicon.ico" />
+    <title>我的账户</title>
+    <link rel="stylesheet" href="./我的账户.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./top_menu.css">
+    <link rel="stylesheet" href="./nav.css">
+</head>
+
+<body>
+    <!-- 最顶部 -->
+    <div class="top_menu">
+        <div class="txt_left">
+            <div class="left_ct">
+                <a href="">手机版</a>
+            </div>
+        </div>
+        <div class="txt_right">
+            <div class="right_ct">
+                <span class="style1">欢迎您，。</span>
+                <a href="">退出</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="header_column">
+        <div class="header_layer">
+            <div class="layer_lt">
+                <img src="https://imgcache.qq.com/bossweb/pay/pay_v4/images/public/logo.png" alt="">
+            </div>
+            <div class="layer_rt">
+                <ul>
+                    <!-- 自己做的哪个页面，就把class="current"换到自己做的页面的li中 -->
+                    <!-- 如果不想改的话，需要自己重新命名，然后到css里面去修改相关数据 -->
+                    <li>
+                        <a href="../index/index.html" title="首 页">首 页</a>
+                    </li>
+                    <li>
+                        <a href="../qbq_pay/Q币充值.html" title="Q币充值">Q币充值</a>
+                    </li>
+                    <li>
+                        <a href="../gamepay/gamepay.html" title="游戏充值">游戏充值</a>
+                    </li>
+                    <li>
+                        <a href="../service_pay/service.html" title="服务开通">服务开通</a>
+                    </li>
+                    <li class="current">
+                        <a href="./我的账户.html" title="我的帐户">我的帐户</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="zuo">
+            <div class="zuozh">
+                <div class="zt">
+                    <div class="ztz">
+                        <img src="./img/g.jpg" alt="">
+                    </div>
+                    <div class="zty">
+                        <div style="font-size: 12px;">。</div>
+                        <div style="font-size: 12px;">------</div>
+                    </div>
+                </div>
+                <div class="zm">
+                    <div class="zm1">
+                        <span style="font-size: 12px; color: gray;">消息中心：</span>
+                        <a target="_blank" class="xz" href="https://pay.qq.com/infocenter/infocenter.shtml">0</a>
+                    </div>
+                    <div class="zm1">
+                        <span style="font-size: 12px; color: gray;">已开服务：</span>
+                        <span style="font-size: 12px;">无</span>
+                    </div>
+                </div>
+                <div class="zm2"></div>
+                <div class="zb">
+                    <a style="text-decoration: none;color: black;" href="javascript:void 0;">
+                        <div id="zb11" class="zb1">
+                            我的账户
+                        </div>
+                    </a>
+                    <a style="text-decoration: none;color: black;"
+                        href="https://my.pay.qq.com/account/index.shtml#deal">
+                        <div id="zb12" class="zb2">
+                            交易明细
+                        </div>
+                    </a>
+                    <a style="text-decoration: none;color: black;"
+                        href="https://my.pay.qq.com/account/index.shtml#qqcard">
+                        <div id="zb13" class="zb2">
+                            QQ卡查询
+                        </div>
+                    </a>
+                    <a style="text-decoration: none;color: black;"
+                        href="https://my.pay.qq.com/account/index.shtml#service">
+                        <div id="zb14" class="zb2">
+                            我的服务
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            <img src="./img/z1.jpg" alt="">
+        </div>
+
+        <div class="right">
+            <div class="righttop">
+                <h3 style="font-size: 16px;color: #666666;">账户余额</h3>
+                <div class="rtm">
+                    <div class="rtmt">
+                        <div class="rtmtz">
+                            <span class="we">
+                                0.00
+                            </span>
+                            <span style="font-size: 13px;">
+                                Q币
+                            </span>
+                            <span style="font-size: 13px; color:#9e9e9e;">
+                                (1 Q币=10 Q点)
+                            </span>
+
+
+                        </div>
+                        <div class="rtmty">
+                            <a target="_blank"
+                                href="https://pay.qq.com/ipay/index.shtml?c=qqacct_save&aid=pay.account.index"
+                                class="rr1">立即充值</a>
+                            <a target="_blank" href="https://pay.qq.com/service/index.shtml?ADTAG=pay.account.index"
+                                class="rr2">购买服务</a>
+                            <a target="_blank" href="https://pay.qq.com/paygame/index.shtml?ADTAG=pay.account.index"
+                                class="rr2">购买游戏币</a>
+                            <a href="javascript:void 0;" class="rr2" id="sqfp">申请发票</a>
+                            <div class="ewm">
+                                <img style="width: 100px;height: 100px;position: absolute;top: 10px;
+                                right: 31px;" src="./img/ewm.png" alt="">
+                                <p style="position: absolute;top: 115px;left: 23px; font-size: 13px;">请使用手机QQ/微信</p>
+                                <p
+                                    style="position: absolute;top: 135px;left: 30px; font-size: 13px;text-align: center;">
+                                    扫描二维码开发票</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="rtmt">
+                        <div class="rtmtz">
+                            <span class="we1">
+                                17951
+                            </span>
+                            <span style="font-size: 13px;">
+                                腾讯积分
+                            </span>
+
+
+
+                        </div>
+                        <div class="rtmty">
+                            <a target="_blank" href="https://jifen.qq.com/pc?shopId=2&pf=pc.pay.zh" class="rr3">积分兑换</a>
+                        </div>
+                    </div>
+                </div>
+                <img style="z-index: 1;" src="./img/tx1.jpg" alt="">
+            </div>
+            <div class="rightbot">
+                <h3 style="font-size: 16px;color: #666666;">向您推荐的业务</h3>
+                <div class="botm">
+                    <div class="botmz">
+                        <div class="tmzt">
+                            包月服务
+                            <a target="_blank"
+                                href="https://pay.qq.com/service/index.shtml?aid=pay.account.index&ADTAG=pay.account.index">更多服务>></a>
+                        </div>
+                        <span class="qqfw">
+                            <a target="_blank"
+                                href="https://pay.qq.com/ipay/index.shtml?c=ltmclub,cjclub&aid=pay.account.index">
+                                <img src="./img/logo_s.png" alt="">
+                                QQ会员
+                            </a>
+                        </span>
+                        <span class="qqfw">
+                            <a target="_blank"
+                                href="https://pay.qq.com/ipay/index.shtml?c=xxjzgw,xxjzghh&aid=pay.account.index">
+                                <img src="./img/huang.png" alt="">
+                                黄钻贵族
+                            </a>
+                        </span>
+                        <span class="qqfw">
+                            <a target="_blank"
+                                href="https://pay.qq.com/ipay/index.shtml?c=xxqgame,xxzxgp&aid=pay.account.index">
+                                <img src="./img/lan.png" alt="">
+                                蓝钻贵族
+                            </a>
+                        </span>
+                        <span class="qqfw">
+                            <a target="_blank"
+                                href="https://pay.qq.com/ipay/index.shtml?c=cfclub&aid=pay.account.index">
+                                <img src="./img/cf.png" alt="">
+                                CF会员
+                            </a>
+                        </span>
+                        <span class="qqfw">
+                            <a target="_blank" href="https://pay.qq.com/ipay/index.shtml?c=xxqqf&aid=pay.account.index">
+                                <img src="./img/hong.png" alt="">
+                                红钻贵族
+                            </a>
+                        </span>
+                        <span class="qqfw">
+                            <a target="_blank"
+                                href="https://pay.qq.com/ipay/index.shtml?c=xxzxsj&aid=pay.account.index">
+                                <img src="./img/lv.png" alt="">
+                                绿钻豪华版
+                            </a>
+                        </span>
+                    </div>
+                    <div class="botmz">
+                        <div class="botmz">
+                            <div class="tmzt">
+                                热门游戏
+                                <a target="_blank"
+                                    href="https://pay.qq.com/paygame/index.shtml?aid=pay.account.index&ADTAG=pay.account.index">更多游戏>></a>
+                            </div>
+                            <span class="qqfw">
+                                <a target="_blank"
+                                    href="https://pay.qq.com/ipay/index.shtml?c=cfdq&aid=pay.account.index">
+                                    <img src="./img/cf.png" alt="">
+                                    CF点
+                                </a>
+                            </span>
+                            <span class="qqfw">
+                                <a target="_blank"
+                                    href="https://pay.qq.com/ipay/index.shtml?c=dnfdq&aid=pay.account.index">
+                                    <img src="./img/DNF.png" alt="">
+                                    DNF点券
+                                </a>
+                            </span>
+                            <span class="qqfw">
+                                <a target="_blank"
+                                    href="https://pay.qq.com/ipay/index.shtml?c=loldq&aid=pay.account.index">
+                                    <img src="./img/LOL.png" alt="">
+                                    英雄联盟点券
+                                </a>
+                            </span>
+                            <span class="qqfw">
+                                <a target="_blank"
+                                    href="https://pay.qq.com/ipay/index.shtml?c=ylzt&aid=pay.account.index">
+                                    <img src="./img/ylzt.png" alt="">
+                                    御龙在天金子
+                                </a>
+                            </span>
+                            <span class="qqfw">
+                                <a target="_blank"
+                                    href="https://pay.qq.com/ipay/index.shtml?c=qxzb&aid=pay.account.index">
+                                    <img src="./img/qxzb.png" alt="">
+                                    七雄争霸元宝
+                                </a>
+                            </span>
+                            <span class="qqfw">
+                                <a target="_blank"
+                                    href="https://pay.qq.com/ipay/index.shtml?c=qqkdc&aid=pay.account.index">
+                                    <img src="./img/qqfc.png" alt="">
+                                    QQ飞车点券
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="bottom">
+        <p>
+            Copyright © 1998 - 2021 Tencent. All Rights Reserved
+            <br>
+            腾讯公司
+            <a target="_blank" href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml">版权所有</a>
+            <a target="_blank" href="http://www.qq.com/contract.shtml">服务条款</a>
+            <a target="_blank" href="https://privacy.qq.com/">隐私政策</a>
+        </p>
+    </div>
+    <script>
+        var bt = document.querySelector('#sqfp');
+        var ewm1 = document.querySelector('.ewm');
+        var cx = true;
+        bt.addEventListener('click', function () {
+            // var ewm1=document.querySelector('.ewm');
+            if (cx) {
+                ewm1.style.display = 'block';
+            }
+            else {
+                ewm1.style.display = 'none';
+            }
+            cx = !cx;
+
+        })
+
+        var zb11 = document.querySelector('#zb11');
+        var zb12 = document.querySelector('#zb12');
+        var zb13 = document.querySelector('#zb13');
+        var zb14 = document.querySelector('#zb14');
+        zb11.addEventListener('click', function () {
+            zb11.style.border = '1px solid #B4B4B4'
+            zb12.style.border = 'none'
+            zb13.style.border = 'none'
+            zb14.style.border = 'none'
+        })
+        zb12.addEventListener('click', function () {
+            zb12.style.border = '1px solid #B4B4B4'
+            zb11.style.border = 'none'
+            zb13.style.border = 'none'
+            zb14.style.border = 'none'
+        })
+        zb13.addEventListener('click', function () {
+            zb13.style.border = '1px solid #B4B4B4'
+            zb12.style.border = 'none'
+            zb11.style.border = 'none'
+            zb14.style.border = 'none'
+        })
+        zb14.addEventListener('click', function () {
+            zb14.style.border = '1px solid #B4B4B4'
+            zb12.style.border = 'none'
+            zb13.style.border = 'none'
+            zb11.style.border = 'none'
+        })
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+            /* 定义定位 */
+            /* 相对于自己本身的位置进行的定位 */
+            /* position: relative;
+            top: -10px;
+            left: 10px; */
+        }
+        .first{
+            position: relative;
+            top: -10px;
+            left: 10px;
+        }
+        /* 绝对定位：有定位的父元素 若无，则找到border为止*/
+        .third{
+            background-color: rgb(104, 69, 23);
+            position: absolute  ;
+            top: 0;
+        }
+        .box{
+
+            width: 500px;
+            height: 500px;
+            background-color: rgb(65, 216, 216);
+            position: relative;
+        }
+        .child{
+            background-color: darkgray;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <!-- 2.定位： 相对定位 relat-->
+    <div class="first">
+
+    </div>
+    <div class="second"></div>
+
+
+    <!-- 绝对定位 -->
+    <div class="third"></div>
+    <div class="box">
+        <div class="child"></div>
+    </div>
+    <!-- 子绝父相    -->
+
+    <!--  -->
+</body>
+</html>
